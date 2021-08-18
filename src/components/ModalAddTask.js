@@ -55,9 +55,9 @@ const ModalAddTask = (props) => {
                         value={title}
                         onChangeText={setTitle}
                     />
-                    <View style={styles.input}>
+                    <View style={styles.picker}>
                         <Picker
-                            style={styles.input}
+                            // style={styles.input}
                             mode="dropdown"
                             selectedValue={status}
                             onValueChange={(itemValue, itemIndex) =>
@@ -145,7 +145,14 @@ const styles = StyleSheet.create({
     input: {
         borderWidth: 1,
         borderColor: '#000',
-        width: 250,
+        width: 300,
+        margin: 5,
+        padding: 15
+    },
+    picker: {
+        borderWidth: 1,
+        borderColor: '#000',
+        width: 300,
         margin: 5
     },
     layoutColorPicker: {

@@ -25,41 +25,14 @@ const AboutScreen = ({ navigation }) => {
                 <Text style={styles.logoName}>ME-LIST</Text>
 
             </View>
-            <View style={styles.layoutTitle}>
-                <Text style={styles.title}>How to use ME-LIST?</Text>
-            </View>
+            {/* <View style={styles.layoutTitle}>
+                <Text style={styles.title}>How to use ME-LIST ?</Text>
+            </View> */}
             <View style={styles.body}>
-                <Text>
-                    ..............................................................................
+                <Text style={styles.textbody}>
+                Aplikasi ini diharapkan dapat memberikan kemudahan bagi pengguna mengorganisir tugas-tugasnya berdasarkan kategori yang pengguna tentukan, dilengkapi fitur progress setiap kategori memberikan pengalaman kepada pengguna seberapa besar tugas yang sudah dikerjakan untuk setiap projectnya. 
                 </Text>
-                <Text>
-                    ..............................................................................
-                </Text>
-                <Text>
-                    ..............................................................................
-                </Text>
-                <Text>
-                    ..............................................................................
-                </Text>
-                <Text>
-                    ..............................................................................
-                </Text>
-                <Text>
-                    ..............................................................................
-                </Text>
-                <Text>
-                    ..............................................................................
-                </Text>
-                <Text>
-                    ..............................................................................
-                </Text>
-                <Text>
-                    ..............................................................................
-                </Text>
-                <Text>
-                    ..............................................................................
-                </Text>
-
+           
             </View>
         </View>
     )
@@ -80,7 +53,7 @@ const styles = StyleSheet.create({
     },
     layoutLogo: {
         flex: 1,
-        justifyContent: "center",
+        justifyContent: "flex-end",
         display: "flex",
         alignContent: "center",
         alignItems: "center",
@@ -100,13 +73,14 @@ const styles = StyleSheet.create({
     },
     layoutTitle: {
         // flex: 1,
-        backgroundColor: primaryColor
+        backgroundColor: primaryColor,
+        height: 50
     },
     body: {
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
-        padding: 5,
-        flex: 2
+        paddingVertical: 50,
+        flex: 2,
     },
     titlePage: {
         fontSize: 20,
@@ -115,11 +89,19 @@ const styles = StyleSheet.create({
         fontFamily: 'Montserrat-Regular'
     },
     title: {
-        fontSize: 20,
+        fontSize: 25,
         color: '#fff',
         fontFamily: 'Montserrat-Regular',
         textAlign: 'center',
-        padding: 5
+        padding: 5,
+        fontWeight: 'bold'
+    },
+    textbody: {
+        fontSize: 20,
+        textAlign: 'center',
+        fontFamily: 'Montserrat-Regular',
+        padding: 2
+
     },
 
 })

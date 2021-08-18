@@ -46,10 +46,11 @@ const NewTaskScreen = ({ listCategories, navigation }) => {
                 </TouchableOpacity>
                 <View style={styles.body}>
                     <TextInput style={styles.input} placeholder="Title" onChangeText={setTitle} />
-                    <View style={styles.input}>
+                    <View style={styles.picker}>
                         <Picker
                             // style={styles.input}
                             mode="dropdown"
+                            dropdownIconColor="#000"
                             selectedValue={status}
                             onValueChange={(itemValue, itemIndex) =>
                                 setStatus(itemValue)
@@ -59,11 +60,11 @@ const NewTaskScreen = ({ listCategories, navigation }) => {
                             <Picker.Item label="Completed" value="Completed" />
                         </Picker>
                     </View>
-                    <View style={styles.input}>
+                    <View style={styles.picker}>
                         <Picker
                             placeholder="Category"
                             numberOfLines={5}
-                            style={styles.input}
+                            // style={styles.input}
                             dropdownIconColor="#000"
                             mode="dropdown"
                             selectedValue={category}
@@ -86,10 +87,6 @@ const NewTaskScreen = ({ listCategories, navigation }) => {
                         onPress={() => setModalVisible(true)}
                         style={{ alignSelf: 'flex-start', margin: 10 }}>
                         Add Category
-                    </Text>
-
-                    <Text>
-                        {JSON.stringify(listCategories)}
                     </Text>
 
                     <Pressable
@@ -127,6 +124,13 @@ const styles = StyleSheet.create({
         fontFamily: 'Montserrat-Regular'
     },
     input: {
+        borderWidth: 1,
+        borderColor: '#000',
+        width: 300,
+        margin: 5,
+        padding: 15
+    },
+    picker: {
         borderWidth: 1,
         borderColor: '#000',
         width: 300,

@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { CardTask, AddCategory, ModalAddTask, FooterBackground } from '../components'
 import { DeleteTask } from '../stores/action'
 import { primaryColor } from '../utils/colorSchema'
+import { widthScreen } from '../utils/sizeScreen'
 const ListTasksScreen = ({ listTasks, route, navigation, DeleteTask
 }) => {
     const category = route.params;
@@ -112,15 +113,17 @@ const styles = StyleSheet.create({
     top: {
         flexDirection: 'row',
         padding: 10,
-        justifyContent: 'center',
-        alignItems: 'center'
+        justifyContent: 'flex-start',
+        alignItems: 'center',
     },
     layoutSearch: {
         flexDirection: 'row',
         borderWidth: 1,
         borderColor: '#000',
         alignItems: 'center',
-        height: 40
+        height: 40,
+        marginLeft: 35,
+        width: widthScreen (70)
     },
     body: {
         justifyContent: "center",
@@ -138,12 +141,13 @@ const styles = StyleSheet.create({
 
     },
     titlePage: {
-        fontSize: 20,
+        fontSize: 23,
         color: '#000',
-        fontFamily: 'Montserrat-Regular'
+        fontFamily: 'Montserrat-Regular',
+        padding: 25
     },
     input: {
-        width: 230
+        width: widthScreen (60)
     },
     button: {
         backgroundColor: '#1F1D59'

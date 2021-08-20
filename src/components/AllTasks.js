@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
+import { heightScreen } from '../utils/sizeScreen'
 
 const TotalTaskCount = (props) => {
     const { total, status } = props
@@ -53,7 +54,8 @@ const AllTasks = ({ data, navigation }) => {
 
 const styles = StyleSheet.create({
     layout: {
-        flex: 1,
+        // flex: 1,
+        height: heightScreen(25),
         display: 'flex',
         flexDirection: 'column',
         padding: 20,

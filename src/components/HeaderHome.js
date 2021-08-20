@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, StatusBar } from 'react-native'
 import { primaryColor } from '../utils/colorSchema'
+import { heightScreen } from '../utils/sizeScreen'
 
 const HeaderHome = () => {
     return (
@@ -16,7 +17,8 @@ const HeaderHome = () => {
 
 const styles = StyleSheet.create({
     layout: {
-        flex: 1,
+        // flex: 1,
+        height: heightScreen(20),
         width: '100%',
         height: '20%',
         justifyContent: 'center',

@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native
 import DonutChart from './DonutChart';
 import AddCategory from './AddCategory';
 import DeleteCategory from './DeleteCategory'
+import { heightScreen } from '../utils/sizeScreen'
 
 const ActiveTasks = ({ data, navigation }) => {
     const [modalVisible, setModalVisible] = useState(false)
@@ -75,7 +76,8 @@ const ActiveTasks = ({ data, navigation }) => {
 
 const styles = StyleSheet.create({
     layout: {
-        flex: 3,
+        // flex: 2,
+        height: heightScreen(50),
         display: 'flex',
         flexDirection: 'column',
         paddingTop: 20,
@@ -83,7 +85,6 @@ const styles = StyleSheet.create({
         marginBottom: 0,
         paddingHorizontal: 20,
         marginBottom: 10,
-
     },
     top: {
         display: 'flex',

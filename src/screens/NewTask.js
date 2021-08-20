@@ -85,7 +85,7 @@ const NewTaskScreen = ({ listCategories, navigation }) => {
                     </View>
                     <Text
                         onPress={() => setModalVisible(true)}
-                        style={{ alignSelf: 'flex-start', margin: 10 }}>
+                        style={{ alignSelf: 'flex-start', margin: 10, color: 'red' }}>
                         Add Category
                     </Text>
 

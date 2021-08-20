@@ -30,7 +30,7 @@ const AboutScreen = ({ navigation }) => {
             </View> */}
             <View style={styles.body}>
                 <Text style={styles.textbody}>
-                Aplikasi ini diharapkan dapat memberikan kemudahan bagi pengguna mengorganisir tugas-tugasnya berdasarkan kategori yang pengguna tentukan, dilengkapi fitur progress setiap kategori memberikan pengalaman kepada pengguna seberapa besar tugas yang sudah dikerjakan untuk setiap projectnya. 
+                This application is expected to make it easier for users to organize their tasks based on the categories that users specify, equipped with a progress feature for each category to provide users with an experience of how much work has been done for each project.
                 </Text>
            
             </View>
@@ -65,8 +65,8 @@ const styles = StyleSheet.create({
         padding: 0
     },
     logoName: {
-        margin: 10,
-        fontSize: 28,
+        margin: 8,
+        fontSize: 26,
         fontWeight: 'bold',
         color: '#1F1D59',
         fontFamily: 'Montserrat-Regular'
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         paddingVertical: 50,
-        flex: 2,
+        flex: 2
     },
     titlePage: {
         fontSize: 20,
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     textbody: {
-        fontSize: 20,
+        fontSize: 18,
         textAlign: 'center',
         fontFamily: 'Montserrat-Regular',
         padding: 2

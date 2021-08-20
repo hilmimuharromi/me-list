@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Pressable, Text, TextInput, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, Pressable, Text, TextInput, TouchableOpacity, Alert } from 'react-native'
 import { AddCategory, FooterBackground } from '../components'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Picker } from '@react-native-picker/picker';
@@ -25,6 +25,9 @@ const NewTaskScreen = ({ listCategories, navigation }) => {
             title,
             status,
             category,
+        }
+        if(!title || !status || !category) {
+            return Alert.alert("please complete the Form");
         }
         dispatch(AddTask(payload))
         setTitle('')

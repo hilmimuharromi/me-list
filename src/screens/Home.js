@@ -23,9 +23,20 @@ const HomeScreen = ({ navigation, listTasks, listCategories }) => {
 
     useEffect(() => {
         let tempData = []
-        let pendingTask = 0
-        let inProgress = 0
-        let completed = 0
+        let dataAll = [
+            {
+                status: 'Pending',
+                total: 0
+            },
+            {
+                status: 'In Progress',
+                total: 0
+            },
+            {
+                status: 'Completed',
+                total: 0
+            }
+        ]
         listCategories.map((category) => {
             let dataActive = {
                 name: category.title,
@@ -38,43 +49,23 @@ const HomeScreen = ({ navigation, listTasks, listCategories }) => {
                 if (item.category === category.title) {
                     dataActive.totalTasks += 1
                     if (item.status === 'Completed') {
-                        completedTasks += 1
-                        completed += 1
+                        dataAll[2].total += 1
                     } else if (item.status === 'Pending') {
-                        pendingTask += 1
+                        dataAll[0].total += 1
                     } else if (item.status === 'In Progress') {
-                        inProgress += 1
+                        dataAll[1].total += 1
                     }
                 }
             })
 
             dataActive.progress = Math.round(completedTasks / dataActive.totalTasks * 100)
-
-            let dataAll = [
-                {
-                    status: 'Pending',
-                    total: pendingTask
-                },
-                {
-                    status: 'In Progress',
-                    total: inProgress
-                },
-                {
-                    status: 'Completed',
-                    total: completed
-                }
-            ]
-
             if (dataActive.totalTasks) {
                 tempData.push(dataActive)
             }
-            setAllTasks(dataAll)
-
-
+            
         })
+        setAllTasks(dataAll)
         setActiveProjects(tempData)
-
-
 
     }, [listTasks, listCategories])
     return (
@@ -95,7 +86,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = state => {
     const { task, category } = state;
-    const { data, loading } = task
+    const { data } = task
     return {
         listTasks: data,
         listCategories: category.data,

@@ -95,7 +95,11 @@ const styles = StyleSheet.create({
         paddingBottom: 70
     },
     card: {
+<<<<<<< HEAD
         width: widthScreen(33),
+=======
+        width: widthScreen(30),
+>>>>>>> f94b91a89f9003d158098b07f32071c6e20a3882
         height: heightScreen(25),
         borderRadius: 30,
         margin: 10,

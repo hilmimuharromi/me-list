@@ -9,7 +9,7 @@ const HeaderHome = () => {
             <StatusBar backgroundColor={primaryColor} />
             <View style={styles.layout}>
                 <Text style={styles.title}>ME-LIST</Text>
-                <Text style={styles.tagline}>Reminds Everytings</Text>
+                <Text style={styles.tagline}>Reminds Everythings</Text>
             </View>
         </>
     )

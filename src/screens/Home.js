@@ -50,6 +50,7 @@ const HomeScreen = ({ navigation, listTasks, listCategories }) => {
                     dataActive.totalTasks += 1
                     if (item.status === 'Completed') {
                         dataAll[2].total += 1
+                        completedTasks += 1
                     } else if (item.status === 'Pending') {
                         dataAll[0].total += 1
                     } else if (item.status === 'In Progress') {

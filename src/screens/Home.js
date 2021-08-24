@@ -58,7 +58,7 @@ const HomeScreen = ({ navigation, listTasks, listCategories }) => {
                 }
             })
 
-            dataActive.progress = Math.round(completedTasks / dataActive.totalTasks * 100)
+            dataActive.progress = Math.round(dataAll[2].total / dataActive.totalTasks * 100)
             if (dataActive.totalTasks) {
                 tempData.push(dataActive)
             }

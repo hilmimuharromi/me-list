@@ -30,8 +30,18 @@ const AboutScreen = ({ navigation }) => {
             </View> */}
             <View style={styles.body}>
                 <Text style={styles.textbody}>
-                This application is expected to make it easier for users to organize their tasks based on the categories that users specify, equipped with a progress feature for each category to provide users with an experience of how much work has been done for each project.
+                ME-LIST is a todo list application that can make it easy for
+                users to organize task based on the categories that user specify,
+                equipped with a category  feature to provide user with an experience
+                of how much work has been done for each project. Because it can be done
+                anywhere and anytime using a smartphone.
                 </Text>
+                
+            <View style={styles.TitleBottom}>
+                <Text style={styles.TextBottom}>
+                ©2021 Created by Praditha Ayu Lestari
+                </Text>
+            </View>
            
             </View>
         </View>
@@ -99,11 +109,24 @@ const styles = StyleSheet.create({
     textbody: {
         fontSize: 18,
         textAlign: 'center',
-        fontFamily: 'Montserrat-Regular',
+        // fontFamily: 'Montserrat-Regular',
         padding: 2
-
     },
-
+    TitleBottom: {
+        fontSize : 14,
+        backgroundColor: primaryColor,
+        padding: 5,
+        height: 30,
+        width: 415,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        position: 'absolute',
+        bottom: 0,
+        margin: 20
+    },
+    TextBottom: {
+        color: '#fff'
+    }
 })
 
 
